@@ -212,7 +212,7 @@ const ComplaintList = ({ search }) => {
   useEffect(() => {
     const fetchComplaints = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/admin/complaints', {
+        const res = await axios.get('https://campus-complaint-portal.onrender.com/api/admin/complaints', {
           headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` },
           params: search
         });
@@ -226,7 +226,7 @@ const ComplaintList = ({ search }) => {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:5000/api/admin/complaints/${id}/status`, { status }, {
+      await axios.put(`https://campus-complaint-portal.onrender.com/api/admin/complaints/${id}/status`, { status }, {
         headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       });
       setComplaints(complaints.map(c => c._id === id ? { ...c, status } : c));
@@ -238,7 +238,7 @@ const ComplaintList = ({ search }) => {
   const deleteComplaint = async (id) => {
     if (window.confirm('Are you sure you want to delete this complaint?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/admin/complaints/${id}`, {
+        await axios.delete(`https://campus-complaint-portal.onrender.com/api/admin/complaints/${id}`, {
           headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
         });
         setComplaints(complaints.filter(c => c._id !== id));
