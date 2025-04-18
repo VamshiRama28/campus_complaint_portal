@@ -32,13 +32,13 @@
 
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Common/Navbar';
 import Footer from './components/Common/Footer';
 import Home from './pages/Home';
 import StudentDashboard from './pages/StudentDashboard';
 import AdminPanel from './pages/AdminPanel';
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
+import Navbar from './components/Common/NavBar';
 import './App.css';
 
 function App() {
