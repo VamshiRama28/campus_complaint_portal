@@ -295,7 +295,7 @@ const ComplaintList = ({ search }) => {
                       className="form-select"
                     >
                       <option value="Pending">Pending</option>
-                      <option value="Accepted">Accepted</option>
+                      <option value="Resolved">Resolved</option>
                       <option value="Rejected">Rejected</option>
                       <option value="Resolved">Resolved</option>
                     </select>
