@@ -21,7 +21,7 @@ const StudentForm = () => {
     if (file) formData.append('file', file);
 
     try {
-      await axios.post('http://localhost:5000/api/complaints', formData, {
+      await axios.post('https://campus-complaint-portal.onrender.com/api/complaints', formData, {
         headers: { 
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'multipart/form-data'

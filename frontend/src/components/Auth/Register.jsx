@@ -13,7 +13,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/register', user);
+      await axios.post('https://campus-complaint-portal.onrender.com/api/auth/register', user);
       alert('Registration successful! Please login.');
       navigate('/login');
     } catch (err) {

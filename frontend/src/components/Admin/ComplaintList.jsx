@@ -267,7 +267,7 @@ const ComplaintList = ({ search }) => {
                     <strong>Description:</strong> {complaint.description}<br />
                     <strong>File:</strong> {complaint.file && complaint.file.originalName ? (
                       <a
-                        href={`http://localhost:5000/api/admin/complaints/${complaint._id}/file`}
+                        href={`https://campus-complaint-portal.onrender.com/api/admin/complaints/${complaint._id}/file`}
                         download={complaint.file.originalName}
                         className="text-primary"
                         target="_blank"
